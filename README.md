@@ -1,4 +1,4 @@
 # SE4458-Final
 Airline system
 
-This prject is not completely finished.
+This project is not completely finished.
