@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uçuş Giriş</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title text-center">Uçuş Giriş</h2>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="flightDate" class="col-sm-4 col-form-label">Uçuş Tarihi:</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="flightDate" name="flightDate">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="flightCode" class="col-sm-4 col-form-label">Uçuş Kodu:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="flightCode" name="flightCode">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="milePoints" class="col-sm-4 col-form-label">Mil Puan:</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="milePoints" name="milePoints">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="capacity" class="col-sm-4 col-form-label">Kapasite:</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="capacity" name="capacity">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12 text-center">
+                            <button type="submit" class="btn btn-primary">KAYDET</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Flights</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-radio {
+            margin-right: 20px;
+        }
+        .search-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .calendar {
+            margin: 10px 0;
+        }
+        .calendar table {
+            width: 100%;
+        }
+        .calendar table th,
+        .calendar table td {
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .calendar table th {
+            background-color: #f1f1f1;
+        }
+        .calendar table td:hover {
+            background-color: #e9ecef;
+        }
+        .calendar table .selected {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="search-box">
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-auto custom-radio">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tripType" id="roundTrip" value="roundTrip" checked>
+                            <label class="form-check-label" for="roundTrip">Round trip</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tripType" id="oneWay" value="oneWay">
+                            <label class="form-check-label" for="oneWay">One way</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="from">From</label>
+                        <input type="text" class="form-control" id="from" placeholder="Izmir">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="to">To</label>
+                        <input type="text" class="form-control" id="to" placeholder="Istanbul">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="departureDate">Departure</label>
+                        <input type="date" class="form-control" id="departureDate">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="returnDate">Return</label>
+                        <input type="date" class="form-control" id="returnDate">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="passengers">Passengers</label>
+                        <input type="number" class="form-control" id="passengers" value="1">
+                    </div>
+                    <div class="col-md-2 mt-4">
+                        <button type="submit" class="btn btn-danger btn-block">Search flights</button>
+                    </div>
+                </div>
+                <div class="form-row align-items-center mt-3">
+                    <div class="col-auto">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="flexibleDates">
+                            <label class="form-check-label" for="flexibleDates">Flexible dates</label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="directFlights">
+                            <label class="form-check-label" for="directFlights">Direct flights</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="calendar mt-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th colspan="7">May 2024</th>
+                                </tr>
+                                <tr>
+                                    <th>Mo</th>
+                                    <th>Tu</th>
+                                    <th>We</th>
+                                    <th>Th</th>
+                                    <th>Fr</th>
+                                    <th>Sa</th>
+                                    <th>Su</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populate this part dynamically based on actual dates -->
+                                <tr>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td class="selected">11</td>
+                                    <td class="selected">12</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                </tr>
+                                <tr>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th colspan="7">June 2024</th>
+                                </tr>
+                                <tr>
+                                    <th>Mo</th>
+                                    <th>Tu</th>
+                                    <th>We</th>
+                                    <th>Th</th>
+                                    <th>Fr</th>
+                                    <th>Sa</th>
+                                    <th>Su</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populate this part dynamically based on actual dates -->
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
